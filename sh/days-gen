@@ -1,0 +1,14 @@
+declare -a parts=("i" "ii")
+declare -a extensions=("in" "rs")
+
+for ((i=1; i<=25; i++)); do
+    for part in "${parts[@]}"; do
+        for ext in "${extensions[@]}"; do
+            file="src/day-$i/$part.$ext"
+            if [ ! -f "$file" ]; then
+                mkdir -p "src/day-$i"
+                touch "$file"
+            fi
+        done
+    done
+done

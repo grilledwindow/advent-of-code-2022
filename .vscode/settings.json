@@ -1,0 +1,259 @@
+{
+  "rust-analyzer.linkedProjects": [
+    {
+      "sysroot_src": "/Users/xa/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/library",
+      "crates": [
+        {
+          "root_module": "src/day-1/i.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-1/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-10/i.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-10/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-11/i.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-11/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-12/i.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-12/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-13/i.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-13/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-14/i.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-14/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-15/i.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-15/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-16/i.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-16/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-17/i.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-17/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-18/i.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-18/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-19/i.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-19/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-2/i.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-2/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-20/i.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-20/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-21/i.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-21/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-22/i.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-22/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-23/i.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-23/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-24/i.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-24/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-25/i.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-25/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-3/i.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-3/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-4/i.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-4/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-5/i.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-5/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-6/i.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-6/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-7/i.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-7/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-8/i.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-8/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-9/i.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-9/ii.rs",
+          "edition": "2021",
+          "deps": []
+        }
+      ]
+    }
+  ]
+}
