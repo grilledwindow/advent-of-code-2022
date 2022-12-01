@@ -1,4 +1,5 @@
 # Courtesy of https://github.com/rust-analyzer/rust-project.json-example/blob/master/.vscode/settings.json
+# Compiles rust files that rust-analyzer should look for
 for f in src/day-*/*.rs
 do
 	crates="${crates}${next}{\"root_module\": \"$f\",\"edition\": \"2021\",\"deps\": []}"
@@ -7,4 +8,4 @@ done
 
 sysroot_src="$(rustc --print sysroot)/lib/rustlib/src/rust/library"
 
-echo "{\"rust-analyzer.linkedProjects\": [{ \"sysroot_src\": \"$sysroot_src\", \"crates\": [$crates]}]}" | jq '' > .vscode/settings.json
+echo "{\"editor.tabSize\": 4, \"rust-analyzer.linkedProjects\": [{ \"sysroot_src\": \"$sysroot_src\", \"crates\": [$crates]}]}" | jq '' > .vscode/settings.json
