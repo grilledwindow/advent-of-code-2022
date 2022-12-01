@@ -12,7 +12,7 @@ fn main() {
         } else {
             for i in 0..highest_calories.len() {
                 if current_total_calories > highest_calories[i] {
-                    shift_right(&mut highest_calories, i);
+                    shift_right_by_one(&mut highest_calories, i);
                     highest_calories[i] = current_total_calories;
                     break;
                 }
@@ -29,7 +29,7 @@ fn main() {
     println!("{top_three_elves_total_calories}");
 }
 
-fn shift_right(array: &mut [i32], index: usize) {
+fn shift_right_by_one(array: &mut [i32], index: usize) {
     for i in index..array.len() - 1 {
         array[i + 1] = array[i];
     }
