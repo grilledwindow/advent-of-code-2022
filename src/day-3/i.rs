@@ -8,18 +8,15 @@ fn main() {
     for line in input.lines() {
         let mut seen: HashSet<u32> = HashSet::new();
         let mut chars = line.chars();
-        let len = line.chars().count();
-        let half_breakboint = len / 2;
+        let half_breakboint = line.chars().count() / 2;
 
         for _ in 0..half_breakboint {
-            let c = chars.next().unwrap();
-            let n = map_to_number(c);
+            let n = map_to_number(chars.next().unwrap());
             seen.insert(n);
         }
 
-        for _ in half_breakboint + 1..len + 1 {
-            let c = chars.next().unwrap();
-            let n = map_to_number(c);
+        loop {
+            let n = map_to_number(chars.next().unwrap());
             if seen.contains(&n) {
                 total += n;
                 break;
