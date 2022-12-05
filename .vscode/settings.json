@@ -15,12 +15,22 @@
           "deps": []
         },
         {
+          "root_module": "src/day-1/util.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
           "root_module": "src/day-10/i.rs",
           "edition": "2021",
           "deps": []
         },
         {
           "root_module": "src/day-10/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-10/util.rs",
           "edition": "2021",
           "deps": []
         },
@@ -35,12 +45,22 @@
           "deps": []
         },
         {
+          "root_module": "src/day-11/util.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
           "root_module": "src/day-12/i.rs",
           "edition": "2021",
           "deps": []
         },
         {
           "root_module": "src/day-12/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-12/util.rs",
           "edition": "2021",
           "deps": []
         },
@@ -55,12 +75,22 @@
           "deps": []
         },
         {
+          "root_module": "src/day-13/util.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
           "root_module": "src/day-14/i.rs",
           "edition": "2021",
           "deps": []
         },
         {
           "root_module": "src/day-14/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-14/util.rs",
           "edition": "2021",
           "deps": []
         },
@@ -75,12 +105,22 @@
           "deps": []
         },
         {
+          "root_module": "src/day-15/util.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
           "root_module": "src/day-16/i.rs",
           "edition": "2021",
           "deps": []
         },
         {
           "root_module": "src/day-16/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-16/util.rs",
           "edition": "2021",
           "deps": []
         },
@@ -95,12 +135,22 @@
           "deps": []
         },
         {
+          "root_module": "src/day-17/util.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
           "root_module": "src/day-18/i.rs",
           "edition": "2021",
           "deps": []
         },
         {
           "root_module": "src/day-18/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-18/util.rs",
           "edition": "2021",
           "deps": []
         },
@@ -115,12 +165,22 @@
           "deps": []
         },
         {
+          "root_module": "src/day-19/util.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
           "root_module": "src/day-2/i.rs",
           "edition": "2021",
           "deps": []
         },
         {
           "root_module": "src/day-2/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-2/util.rs",
           "edition": "2021",
           "deps": []
         },
@@ -135,12 +195,22 @@
           "deps": []
         },
         {
+          "root_module": "src/day-20/util.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
           "root_module": "src/day-21/i.rs",
           "edition": "2021",
           "deps": []
         },
         {
           "root_module": "src/day-21/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-21/util.rs",
           "edition": "2021",
           "deps": []
         },
@@ -155,12 +225,22 @@
           "deps": []
         },
         {
+          "root_module": "src/day-22/util.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
           "root_module": "src/day-23/i.rs",
           "edition": "2021",
           "deps": []
         },
         {
           "root_module": "src/day-23/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-23/util.rs",
           "edition": "2021",
           "deps": []
         },
@@ -175,12 +255,22 @@
           "deps": []
         },
         {
+          "root_module": "src/day-24/util.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
           "root_module": "src/day-25/i.rs",
           "edition": "2021",
           "deps": []
         },
         {
           "root_module": "src/day-25/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-25/util.rs",
           "edition": "2021",
           "deps": []
         },
@@ -195,12 +285,22 @@
           "deps": []
         },
         {
+          "root_module": "src/day-3/util.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
           "root_module": "src/day-4/i.rs",
           "edition": "2021",
           "deps": []
         },
         {
           "root_module": "src/day-4/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-4/util.rs",
           "edition": "2021",
           "deps": []
         },
@@ -215,12 +315,22 @@
           "deps": []
         },
         {
+          "root_module": "src/day-5/util.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
           "root_module": "src/day-6/i.rs",
           "edition": "2021",
           "deps": []
         },
         {
           "root_module": "src/day-6/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-6/util.rs",
           "edition": "2021",
           "deps": []
         },
@@ -235,6 +345,11 @@
           "deps": []
         },
         {
+          "root_module": "src/day-7/util.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
           "root_module": "src/day-8/i.rs",
           "edition": "2021",
           "deps": []
@@ -245,12 +360,22 @@
           "deps": []
         },
         {
+          "root_module": "src/day-8/util.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
           "root_module": "src/day-9/i.rs",
           "edition": "2021",
           "deps": []
         },
         {
           "root_module": "src/day-9/ii.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
+          "root_module": "src/day-9/util.rs",
           "edition": "2021",
           "deps": []
         }
