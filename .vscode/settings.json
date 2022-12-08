@@ -335,6 +335,11 @@
           "deps": []
         },
         {
+          "root_module": "src/day-7/dir.rs",
+          "edition": "2021",
+          "deps": []
+        },
+        {
           "root_module": "src/day-7/i.rs",
           "edition": "2021",
           "deps": []
