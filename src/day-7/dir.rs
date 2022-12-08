@@ -15,8 +15,9 @@ impl<'a> Dir<'a> {
     }
 
     pub(super) fn calculate_size(&mut self) -> u32 {
-        const size: u32 = self._get_size(&self);
+        let size = self._get_size(&self);
         self.size = size;
+        size
     }
 
     fn get_size(&self) -> u32 {
