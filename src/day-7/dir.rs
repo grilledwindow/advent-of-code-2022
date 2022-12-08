@@ -1,8 +1,8 @@
 #[derive(Debug)]
 pub(super) struct Dir<'a> {
-    pub name: &'a str,
-    pub size: u32,
-    pub children: Option<Vec<Dir<'a>>>,
+    name: &'a str,
+    size: u32,
+    children: Option<Vec<Dir<'a>>>,
 }
 
 impl<'a> Dir<'a> {
