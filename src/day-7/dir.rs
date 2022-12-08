@@ -20,6 +20,18 @@ impl<'a> Dir<'a> {
         size
     }
 
+    pub(super) fn add_child_dir(&mut self, dir: Dir<'a>) {
+        if let Some(children) = &mut self.children {
+            children.push(dir);
+        } else {
+            self.children = Some(vec![dir]);
+        }
+    }
+
+    pub(super) fn set_children(&mut self, children: Option<Vec<Dir<'a>>>) {
+        self.children = children;
+    }
+
     fn get_size(&self) -> u32 {
         self.size
     }
