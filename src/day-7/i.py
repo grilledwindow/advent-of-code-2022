@@ -64,7 +64,7 @@ def main():
                                         current_dir = next(
                                             filter(lambda dir: dir.name() == target_dir, current_dir.dirs()), None)
                 case 'dir':
-                    dir = split[1]
+                    dir = split[1].rstrip()
                     current_dir_dirs.append(Dir(current_dir, dir, None, []))
                 case size_str:
                     size = int(size_str)
