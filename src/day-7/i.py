@@ -2,7 +2,7 @@ from typing import Optional
 
 
 class Dir:
-    def __init__(self, root: Optional['Dir'], name: str, size: int, dirs: Optional[list['Dir']]) -> None:
+    def __init__(self, root: Optional['Dir'], name: str, size: Optional[int], dirs: Optional[list['Dir']]) -> None:
         self.__root = root
         self.__name = name
         self.__size = size
@@ -14,8 +14,10 @@ class Dir:
     def name(self) -> str:
         return self.__name
 
-    def size(self) -> int:
-        self.__size = self.__calc_size(self.__dirs)
+    def size(self) -> Optional[int]:
+        if self.__size is None:
+            self.__size = self.__calc_size(self.__dirs)
+
         return self.__size
 
     def dirs(self) -> Optional[list['Dir']]:
@@ -27,12 +29,14 @@ class Dir:
     def __calc_size(self, dirs: Optional[list['Dir']]) -> int:
         if dirs is None:
             return self.__size
+        elif self.__size is None:
+            self.__size = 0
 
         return self.__size + sum(map(lambda dir: dir.size(), dirs))
 
 
 def main():
-    root = Dir(None, '/', 0, [])
+    root = Dir(None, '/', None, [])
     current_dir = root
     current_dir_dirs = []
 
@@ -61,7 +65,7 @@ def main():
                                             filter(lambda dir: dir.name() == target_dir, current_dir.dirs()), None)
                 case 'dir':
                     dir = split[1]
-                    current_dir_dirs.append(Dir(current_dir, dir, 0, []))
+                    current_dir_dirs.append(Dir(current_dir, dir, None, []))
                 case size_str:
                     size = int(size_str)
                     file = split[1]
