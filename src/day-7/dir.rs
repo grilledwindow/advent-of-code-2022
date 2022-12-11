@@ -1,13 +1,16 @@
+use std::collections::HashMap;
+
+type Dirs<'a> = HashMap<&'a str, Dir<'a>>;
+
 #[derive(Debug)]
 pub(super) struct Dir<'a> {
-    name: &'a str,
     size: u32,
-    dirs: Option<Vec<Dir<'a>>>,
+    dirs: Option<Dirs<'a>>,
 }
 
 impl<'a> Dir<'a> {
-    pub(super) fn new(name: &'a str, size: u32, dirs: Option<Vec<Dir<'a>>>) -> Self {
-        Self { name, size, dirs }
+    pub(super) fn new(size: u32, dirs: Option<Dirs<'a>>) -> Self {
+        Self { size, dirs }
     }
 
     pub(super) fn calculate_size(&mut self) -> u32 {
@@ -16,15 +19,17 @@ impl<'a> Dir<'a> {
         size
     }
 
-    pub(super) fn add_dir(&mut self, dir: Dir<'a>) {
+    pub(super) fn add_dir(&mut self, dir_name: &'a str, dir: Dir<'a>) {
         if let Some(dirs) = &mut self.dirs {
-            dirs.push(dir);
+            dirs.insert(dir_name, dir);
         } else {
-            self.dirs = Some(vec![dir]);
+            let mut dirs = HashMap::new();
+            dirs.insert(dir_name, dir);
+            self.dirs = Some(dirs);
         }
     }
 
-    pub(super) fn set_dirs(&mut self, dirs: Option<Vec<Dir<'a>>>) {
+    pub(super) fn set_dirs(&mut self, dirs: Option<Dirs<'a>>) {
         self.dirs = dirs;
     }
 
@@ -32,7 +37,7 @@ impl<'a> Dir<'a> {
         self.size
     }
 
-    fn get_dirs(&self) -> &Option<Vec<Dir<'a>>> {
+    fn get_dirs(&self) -> &Option<Dirs> {
         &self.dirs
     }
 
@@ -40,7 +45,7 @@ impl<'a> Dir<'a> {
         if let Some(dirs) = dir.get_dirs() {
             dirs
                 .into_iter()
-                .fold(dir.size, |_size, _dir| _size + self._get_size(&_dir))
+                .fold(dir.size, |_size, (_, _dir)| _size + self._get_size(&_dir))
         } else {
             dir.size
         }
