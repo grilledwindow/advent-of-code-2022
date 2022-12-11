@@ -8,18 +8,21 @@ class Dir:
         self.__size = size
         self.__dirs = dirs
 
-    def size(self):
+    def root(self) -> Optional['Dir']:
+        return self.__root
+
+    def name(self) -> str:
+        return self.__name
+
+    def size(self) -> int:
         self.__size = self.__calc_size(self.__dirs)
         return self.__size
 
-    def dirs(self):
+    def dirs(self) -> Optional[list['Dir']]:
         return self.__dirs
 
-    def add_dir(self, dir: 'Dir'):
-        if self.__dirs is None:
-            self.__dirs = [dir]
-        else:
-            self.__dirs.append(dir)
+    def set_dirs(self, dirs: Optional[list['Dir']]):
+        self.__dirs = dirs
 
     def __calc_size(self, dirs: Optional[list['Dir']]) -> int:
         if dirs is None:
@@ -29,11 +32,42 @@ class Dir:
 
 
 def main():
-    dir = Dir(None, '/', 0, [])
-    dir.add_dir(Dir(dir, 'a', 23, None))
-    dir.add_dir(Dir(dir, 'b', 45, None))
+    root = Dir(None, '/', 0, [])
+    current_dir = root
+    current_dir_dirs = []
 
-    print(dir.size())
+    with open('i.in', 'r') as f:
+        for line in f.readlines():
+            split = line.split(' ')
+            first = split[0]
+            match first:
+                case '$':
+                    if current_dir is not None:
+                        current_dir.set_dirs(current_dir_dirs)
+                    command = split[1]
+                    match command:
+                        case 'ls':
+                            current_dir_dirs = []
+                        case 'cd':
+                            target_dir = split[2]
+                            match target_dir:
+                                case '/':
+                                    pass
+                                case '..':
+                                    current_dir = current_dir.root()
+                                case _:
+                                    if current_dir is not None:
+                                        current_dir = next(
+                                            filter(lambda dir: dir.name() == target_dir, current_dir.dirs()), None)
+                case 'dir':
+                    dir = split[1]
+                    current_dir_dirs.append(Dir(current_dir, dir, 0, []))
+                case size_str:
+                    size = int(size_str)
+                    file = split[1]
+                    current_dir_dirs.append(Dir(current_dir, file, size, None))
+
+    print(root.size())
 
 
 main()
