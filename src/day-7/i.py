@@ -26,6 +26,9 @@ class Dir:
     def dirs(self) -> Optional[list['Dir']]:
         return self.__dirs
 
+    def is_dir(self) -> bool:
+        return self.__dirs is not None
+
     def add_dir(self, dir: 'Dir'):
         if self.__dirs is None:
             self.__dirs = [dir]
@@ -36,6 +39,21 @@ class Dir:
         if self.__size is not None:
             return self.__size
         return sum(map(lambda dir: dir.size(), dirs))
+
+
+def find_dirs_with_total_size_at_most(root: Dir, limit: int = 100_000) -> int:
+    return __find_dirs_with_total_size_at_most(root, limit)
+
+
+def __find_dirs_with_total_size_at_most(_dir: Dir, limit: int) -> int:
+    if not _dir.is_dir():
+        return 0
+
+    if size := _dir.size() > limit:
+        size = 0
+
+    return size + sum([__find_dirs_with_total_size_at_most(dir, limit) for dir in _dir.dirs()]) \
+
 
 
 def main():
@@ -64,7 +82,6 @@ def main():
                                     if current_dir is not None:
                                         current_dir = next(
                                             filter(lambda dir: dir.name() == target_dir, current_dir.dirs()), None)
-
                 case 'dir':
                     dir = split[1].rstrip()
                     current_dir.add_dir(Dir(current_dir, dir, None, []))
@@ -74,6 +91,7 @@ def main():
                     current_dir.add_dir(Dir(current_dir, file, size, None))
 
     print(root.size())
+    print(find_dirs_with_total_size_at_most(root))
 
 
 main()
