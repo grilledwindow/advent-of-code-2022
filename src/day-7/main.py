@@ -57,7 +57,8 @@ def __find_dirs_with_total_size_at_most(_dir: Dir, limit: int) -> int:
 
 def find_smallest_dir_above(root: Dir, threshold: int) -> int:
     return __find_smallest_dir_above(root, root.size(), threshold)
-    
+
+
 def __find_smallest_dir_above(_dir: Dir, best: int, threshold: int) -> Optional[int]:
     if not _dir.is_dir():
         return best
@@ -113,5 +114,6 @@ def main():
     space_needed = 30_000_000
     threshold = space_needed - (space_available - root.size())
     print(find_smallest_dir_above(root, threshold))
+
 
 main()
