@@ -52,8 +52,21 @@ def __find_dirs_with_total_size_at_most(_dir: Dir, limit: int) -> int:
     if size := _dir.size() > limit:
         size = 0
 
-    return size + sum([__find_dirs_with_total_size_at_most(dir, limit) for dir in _dir.dirs()]) \
+    return size + sum([__find_dirs_with_total_size_at_most(dir, limit) for dir in _dir.dirs()])
 
+
+def find_smallest_dir_above(root: Dir, threshold: int) -> int:
+    return __find_smallest_dir_above(root, root.size(), threshold)
+    
+def __find_smallest_dir_above(_dir: Dir, best: int, threshold: int) -> Optional[int]:
+    if not _dir.is_dir():
+        return best
+
+    size = _dir.size()
+    if size >= threshold and size < best:
+        return min([__find_smallest_dir_above(dir, size, threshold) for dir in _dir.dirs()])
+    else:
+        return min([__find_smallest_dir_above(dir, best, threshold) for dir in _dir.dirs()])
 
 
 def main():
@@ -91,7 +104,14 @@ def main():
                     current_dir.add_dir(Dir(current_dir, file, size, None))
 
     print(root.size())
+
+    # i
     print(find_dirs_with_total_size_at_most(root))
 
+    # ii
+    space_available = 70_000_000
+    space_needed = 30_000_000
+    threshold = space_needed - (space_available - root.size())
+    print(find_smallest_dir_above(root, threshold))
 
 main()
