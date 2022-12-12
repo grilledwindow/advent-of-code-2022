@@ -49,7 +49,7 @@ def __find_dirs_with_total_size_at_most(_dir: Dir, limit: int) -> int:
     if not _dir.is_dir():
         return 0
 
-    if size := _dir.size() > limit:
+    if (size := _dir.size()) > limit:
         size = 0
 
     return size + sum([__find_dirs_with_total_size_at_most(dir, limit) for dir in _dir.dirs()])
