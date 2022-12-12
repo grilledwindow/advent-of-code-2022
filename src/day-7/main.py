@@ -65,9 +65,9 @@ def __find_smallest_dir_above(_dir: Dir, best: int, threshold: int) -> Optional[
 
     size = _dir.size()
     if size >= threshold and size < best:
-        return min([__find_smallest_dir_above(dir, size, threshold) for dir in _dir.dirs()])
-    else:
-        return min([__find_smallest_dir_above(dir, best, threshold) for dir in _dir.dirs()])
+        best = size
+
+    return min([__find_smallest_dir_above(dir, best, threshold) for dir in _dir.dirs()])
 
 
 def main():
